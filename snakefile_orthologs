@@ -1,7 +1,7 @@
 rule ortholog_search:
         input:
-                 'proteomes' 
-        conda:   'orthofinder.yaml'
+                 'orthology_searches/formatted_proteomes_3sp' 
+        conda:   'env/orthofinder.yaml'
 	threads: 16
         shell:   'orthofinder -f {input}'
 
